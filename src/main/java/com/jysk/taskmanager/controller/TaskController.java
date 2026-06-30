@@ -45,10 +45,5 @@ public class TaskController {
         return "redirect:/tasks"; // send back to task list
     }
 
-    @PostMapping("/tasks/{id}/toggle") // {id}
-    public String toggleTaskStatus(@PathVariable("id") Long id) {
-        taskService.toggleTask(id);
-        return "redirect:/tasks"; // send back to task list
-    }
 }
 

@@ -36,13 +36,13 @@ public class TaskService {
     //        taskRepository.delete(task);
     //    }
 
-    public void deleteTask(Long id){
+    public void deleteTask(Long id) {
         taskRepository.deleteById(id); // DELETE FROM tasks WHERE id = 5;
     }
 
 
     // must use task because takrepo doesnt have a toggle
-    public void toggleTask(Long id){
+    public void toggleTask(Long id) {
         Task task = taskRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Task with id " + id + " not found"));
 
         task.setStatus(!task.getStatus());

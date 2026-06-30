@@ -8,12 +8,12 @@ public interface TaskRepository extends JpaRepository<Task, Long> {
 
 
 
-
-    // repository.findAll() (returns a list of Task objects)
+    //inherits  from JpaRepository
+    // repository.findAll()
     //
-    //repository.findById(Long id) (searches using a Long ID)
+    //repository.findById(Long id)
     //
-    //repository.save(Task task) (saves a Task object)
+    //repository.save(Task task) (saves  )
 
 
 

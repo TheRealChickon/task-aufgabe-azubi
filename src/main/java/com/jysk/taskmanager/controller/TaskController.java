@@ -1,4 +1,4 @@
-package controller;
+package com.jysk.taskmanager.controller;
 
 import com.jysk.taskmanager.model.Task;
 import com.jysk.taskmanager.service.TaskService;
@@ -33,16 +33,22 @@ public class TaskController {
     }
 
 
-    @PostMapping("tasks/{id}/delete") // {id}
-    public String removeTask(@PathVariable("id") Long id) {
-        taskService.deleteTask(id);
+    @PostMapping("/tasks")
+    public String saveTask(Task task) {
+        taskService.saveTask(task);
         return "redirect:/tasks";
     }
 
-    @PostMapping("tasks/{id}/toggle") // {id}
+    @PostMapping("/tasks/{id}/delete") // {id}
+    public String removeTask(@PathVariable("id") Long id) {
+        taskService.deleteTask(id);
+        return "redirect:/tasks"; // send back to task list
+    }
+
+    @PostMapping("/tasks/{id}/toggle") // {id}
     public String toggleTaskStatus(@PathVariable("id") Long id) {
         taskService.toggleTask(id);
-        return "redirect:/tasks";
+        return "redirect:/tasks"; // send back to task list
     }
 }
 

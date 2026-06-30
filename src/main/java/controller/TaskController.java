@@ -25,7 +25,6 @@ public class TaskController {
 
     @GetMapping("/new")
     public String showCreateForm(Model model){
-        
     }
 }
 

@@ -26,4 +26,23 @@ public class TaskService {
     public List<Task> getAllTasks() {
         return taskRepository.findAll();
     }
+
+    public void saveTask(Task task) {
+        taskRepository.save(task);
+    }
+
+    public void deleteTask(Task task) {
+        taskRepository.delete(task);
+    }
+
+    public void toggleTask(Task task) {
+        // 1. Den aktuellen Boolean-Wert auslesen und umdrehen (! = Invertierung)
+        // Hinweis: Falls dein Getter in der Entity 'getStatus()' heißt, passe es kurz an.
+        task.setStatus(!task.getStatus());
+
+        // 2. Das veränderte Objekt wieder abspeichern -> JPA führt automatisch ein UPDATE aus
+        taskRepository.save(task);
+    }
+
+
 }

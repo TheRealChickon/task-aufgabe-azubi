@@ -23,5 +23,9 @@ public class TaskController {
         return "task-list"; // returns the name of the frontend html
     }
 
+    @GetMapping("/new")
+    public String showCreateForm(Model model){
+        
+    }
 }
 

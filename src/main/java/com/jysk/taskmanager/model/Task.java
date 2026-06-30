@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity
+@Entity // JPA-Annotation not spring, tells hibernate db structure - maria -
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // automatically increment id for new tasks
@@ -34,8 +34,6 @@ public class Task {
     public boolean getStatus() {
         return status;
     }
-
-    //
 
     public void setId(Long id) {
         this.id = id;

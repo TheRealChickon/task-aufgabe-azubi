@@ -40,8 +40,7 @@ public class TaskService {
         taskRepository.deleteById(id); // DELETE FROM tasks WHERE id = 5;
     }
 
-
-    // must use task because takrepo doesnt have a toggle
+    // must use task because takrepo interface doesnt have a toggle, its JpaRepository
     public void toggleTask(Long id) {
         Task task = taskRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Task with id " + id + " not found"));
 

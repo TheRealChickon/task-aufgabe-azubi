@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
-@Controller
+@Controller // Spring scanns inside of this class for web mappings ( get, post 0.  @Component ?
 public class TaskController {
 
 
@@ -45,5 +45,6 @@ public class TaskController {
         return "redirect:/tasks"; // send back to task list
     }
 
+    //ToDo toggle
 }
 

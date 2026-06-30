@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
-// entity, data type of entitys primary key, Id type
+// entity class plus data type of entitys primary key, Id type
 public interface TaskRepository extends JpaRepository<Task, Long> {
 
 

@@ -10,7 +10,7 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // automatically increment id for new tasks
     // otherwise need to increment and delete myself for every new task
-
+    // @Column(name = "id") change name of row in hibrnate, otherwise deefault to name of variable in this_case
     private Long id;
 
     private String title;
